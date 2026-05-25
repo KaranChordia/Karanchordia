@@ -55,8 +55,8 @@ The following data points remained unverified or lack technical documentation in
 ## 4. Recommended Next Actions for the Founder
 
 1.  **Naming & Domain Purchase** (`[Recommendation]`):
-    *   Review the top recommendations in [company_name_ideas.md](file:///Users/k.c/KC-HDT-AIS/03_brand_strategy/naming/company_name_ideas.md) (particularly *Sutra Automations* and *Vyom Dynamics*).
-    *   Check live domain registration pricing for `.ai`, `.studio`, or `.com` TLDs and register the selected brand name.
+    *   Register domain endpoints for the officially selected brand name **Kramaniti** (e.g., `kramaniti.com` and `kramaniti.ai`).
+    *   Check live domain registration pricing across active registrars and secure the brand domain.
 2.  **Workflow Customization** (`[Recommendation]`):
     *   Review the operating workflows in [ai_service_workflows.md](file:///Users/k.c/KC-HDT-AIS/05_ai_strategy/workflows/ai_service_workflows.md) and tweak the onboarding checklist or audit steps to match your actual tools (e.g. replacing general terms with Airtable, Retool, or Make.com as appropriate).
 3.  **Populate Research Gaps** (`[Recommendation]`):

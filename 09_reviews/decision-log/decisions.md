@@ -7,12 +7,12 @@ This log registers the major strategic and structural decisions made during the 
 ## 1. Active Decisions Register
 
 ### Decision 1: Retirement of "HowDramaTech" Branding
-*   **Status:** Approved (`[Recommendation]`)
+*   **Status:** Confirmed (`[Fact]`)
 *   **Rationale:** High-ticket B2B consulting firms demand premium, authoritative, and clean identities. The legacy branding *HowDramaTech* is too informal and vlogger-centric, which hurts credibility during corporate procurement cycles.
 *   **Alternatives Rejected:**
     1.  *Maintaining HowDramaTech:* Rejected because search records tie the brand to consumer-tech vlogging and local events, which limits enterprise scalability.
     2.  *Renaming to "DramaTech AI":* Rejected because the word "Drama" remains unprofessional in high-ticket enterprise sectors.
-*   **Selected Alternative:** Recommend a complete transition to a Sanskrit-tech hybrid brand (e.g. *Sutra Automations* or *Vyom Dynamics*).
+*   **Selected Alternative:** Officially selected and confirmed the brand name **Kramaniti** (Sanskrit/Javanese hybrid meaning "Algorithmic Strategy / Workflow Logic").
 
 ### Decision 2: Reframe the 2020 - 2023 Career Gap
 *   **Status:** Approved (`[Recommendation]`)

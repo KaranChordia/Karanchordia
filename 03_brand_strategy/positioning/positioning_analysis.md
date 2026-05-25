@@ -73,5 +73,5 @@ Karan is positioned at the intersection of two distinct markets:
 | Gap / Inconsistency | Risk | Strategic Reframe / Mitigation |
 | :--- | :--- | :--- |
 | **The 2020-2023 Youtube Hiatus** | Client may perceive a lack of stability or active career progress. | **Systems R&D Phase**: Position this period as a deliberate, intensive research and development incubation phase spent mastering algorithmic systems and macroeconomic risk management. |
-| **Legacy "HowDramaTech" Brand** | Too informal and vlogger-focused for high-ticket corporate procurement. | **Retire & Partition**: Archive `HowDramaTech` as a historical creative playground. Launch a premium, culturally-rooted brand (e.g., *Sutra Automations*). |
+| **Legacy "HowDramaTech" Brand** | Too informal and vlogger-focused for high-ticket corporate procurement. | **Retire & Partition**: Archive `HowDramaTech` as a historical creative playground. Launch the premium, culturally-rooted brand **Kramaniti**. |
 | **No Traditional Corporate Ladder** | Some enterprise clients require structured corporate credentials. | **Showcase Client Results**: Emphasize high-value client retainers, the 5-month Nexocean technical tooling stint, and direct AI application builds. |

@@ -7,8 +7,10 @@ This is a dependency-free static site. Vercel can deploy it directly with framew
 ## Local preview
 
 ```bash
-python3 -m http.server 8000
+python3 preview_server.py
 ```
+
+The preview server disables asset caching, so CSS and content edits appear on refresh without a hard-reload detour.
 
 ## Publish with Vercel and Cloudflare
 

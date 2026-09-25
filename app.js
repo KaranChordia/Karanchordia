@@ -1,5 +1,25 @@
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+const objectGroups = [
+  ['.home-hero', 'hero-objects', ['axis-chip', 'axis-ring', 'axis-dot']],
+  ['.practice-field', 'field-objects', ['field-orbit', 'field-chip', 'field-dot']],
+  ['.evidence', 'evidence-objects', ['archive-chip', 'archive-ring', 'archive-dot']],
+];
+
+objectGroups.forEach(([selector, groupClass, objectClasses]) => {
+  const section = document.querySelector(selector);
+  if (!section || section.querySelector(`.${groupClass}`)) return;
+  const group = document.createElement('div');
+  group.className = `choreo-objects ${groupClass}`;
+  group.setAttribute('aria-hidden', 'true');
+  objectClasses.forEach((objectClass) => {
+    const object = document.createElement('span');
+    object.className = `choreo-object ${objectClass}`;
+    group.append(object);
+  });
+  section.append(group);
+});
+
 document.querySelectorAll('[data-year]').forEach((node) => {
   node.textContent = new Date().getFullYear();
 });
@@ -49,4 +69,25 @@ if (reduceMotion) {
       scene.style.setProperty('--rx', `${y * -4}deg`);
     }, { passive: true });
   }
+
+  const choreographedSections = [...document.querySelectorAll('.home-hero, .practice-field, .evidence, .home-close')];
+  let ticking = false;
+  const updateChoreography = () => {
+    const viewportHeight = window.innerHeight;
+    choreographedSections.forEach((section) => {
+      const bounds = section.getBoundingClientRect();
+      const progress = Math.max(0, Math.min(1, ((viewportHeight * 0.22) - bounds.top) / bounds.height));
+      section.style.setProperty('--p', progress.toFixed(4));
+    });
+    ticking = false;
+  };
+  const requestChoreographyUpdate = () => {
+    if (!ticking) {
+      ticking = true;
+      window.requestAnimationFrame(updateChoreography);
+    }
+  };
+  requestChoreographyUpdate();
+  window.addEventListener('scroll', requestChoreographyUpdate, { passive: true });
+  window.addEventListener('resize', requestChoreographyUpdate, { passive: true });
 }

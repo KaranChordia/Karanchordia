@@ -26,6 +26,29 @@ document.querySelectorAll('[data-year]').forEach((node) => {
 
 const menuButton = document.querySelector('.menu-toggle');
 const nav = document.querySelector('#site-nav');
+const workLink = nav?.querySelector('a[href="work.html"]');
+if (workLink && !workLink.closest('.nav-work')) {
+  const workGroup = document.createElement('div');
+  workGroup.className = 'nav-work';
+  workGroup.setAttribute('aria-label', 'Work');
+  workLink.parentNode.insertBefore(workGroup, workLink);
+  workGroup.append(workLink);
+
+  const workMenu = document.createElement('div');
+  workMenu.className = 'work-submenu';
+  workMenu.setAttribute('aria-label', 'Work categories');
+  [
+    ['UI / UX', 'work.html#uiux'],
+    ['Content / Video', 'work.html#content-video'],
+    ['Words', 'work.html#writing'],
+  ].forEach(([label, href]) => {
+    const link = document.createElement('a');
+    link.textContent = label;
+    link.href = href;
+    workMenu.append(link);
+  });
+  workGroup.append(workMenu);
+}
 if (menuButton && nav) {
   const closeMenu = () => {
     menuButton.setAttribute('aria-expanded', 'false');

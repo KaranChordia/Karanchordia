@@ -1,0 +1,103 @@
+.wg{margin-top:clamp(2rem,5vw,4rem);display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:clamp(1.5rem,4vw,3.5rem);align-items:start;color:#fff4ef}
+.wg[hidden]{display:none}.js-gallery .project-index{display:none}
+.wg-stage{position:relative;perspective:1600px;min-width:0}
+.wg-frame{position:relative;border-radius:14px;background:#4a2035;padding:30px 10px 10px;box-shadow:0 40px 80px -30px rgba(0,0,0,.6),0 0 0 1px rgba(255,244,239,.08);transform-style:preserve-3d;transition:transform .5s cubic-bezier(.2,.7,.2,1);will-change:transform}
+.wg-frame:before{content:"";position:absolute;top:11px;left:14px;width:8px;height:8px;border-radius:50%;background:rgba(242,198,167,.55);box-shadow:14px 0 rgba(255,244,239,.22),28px 0 rgba(255,244,239,.22)}
+.wg-view{position:relative;aspect-ratio:16/10;overflow:hidden;border-radius:6px;background:#2a0f1e;touch-action:pan-y;cursor:grab;user-select:none}
+.wg-view.drag{cursor:grabbing}
+.wg-track{display:flex;height:100%;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.wg-slide{flex:0 0 100%;height:100%;border:0;padding:0;margin:0;background:none;cursor:zoom-in;display:flex;align-items:center;justify-content:center}
+.wg-slide img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;pointer-events:none}
+.wg-slide img.tall{object-fit:contain;background:#2a0f1e}
+.wg-ctrl{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:1rem}
+.wg-btn{width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,244,239,.25);background:transparent;color:inherit;font-size:1.1rem;cursor:pointer;transition:background .2s,border-color .2s}
+.wg-btn:hover{background:rgba(242,198,167,.12);border-color:#f2c6a7}
+.wg-dots{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
+.wg-dot{width:22px;height:3px;border:0;padding:0;background:rgba(255,244,239,.25);cursor:pointer;border-radius:2px;transition:background .3s,width .3s}
+.wg-dot[aria-current="true"]{background:#f2c6a7;width:34px}
+.wg-count{font-family:"DM Mono",monospace;font-size:.78rem;opacity:.7;min-width:4.5em;text-align:right}
+.wg-cap{font-family:"DM Mono",monospace;font-size:.8rem;opacity:.75;margin:.75rem 0 0;min-height:1.3em}
+.wg-info{min-width:0}
+.wg-meta{transition:opacity .35s}.wg-meta.fade{opacity:0}
+.wg-num{font-family:"DM Mono",monospace;font-size:.8rem;color:#f2c6a7;letter-spacing:.05em}
+.wg-title{font-size:clamp(2rem,4vw,3.2rem);font-weight:500;line-height:1.05;margin:.4rem 0 .8rem;letter-spacing:-.02em}
+.wg-badge{display:inline-block;font-family:"DM Mono",monospace;font-size:.7rem;vertical-align:middle;margin-left:.6rem;padding:.25em .7em;border:1px solid #f2c6a7;color:#f2c6a7;border-radius:99px;letter-spacing:.06em}
+.wg-line{font-size:1.1rem;line-height:1.5;margin:0 0 .5rem}
+.wg-role{font-size:.9rem;opacity:.7;line-height:1.5;margin:0 0 1.4rem}
+.wg-link{display:inline-flex;gap:.5em;color:#f2c6a7;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:2px}
+.wg-link:hover{opacity:.8}
+.wg-list{list-style:none;padding:0;margin:2rem 0 0;border-top:1px solid rgba(255,244,239,.12)}
+.wg-pick{display:grid;grid-template-columns:64px 1fr;gap:.9rem;align-items:center;width:100%;padding:.7rem 0;background:none;border:0;border-bottom:1px solid rgba(255,244,239,.12);color:inherit;text-align:left;cursor:pointer;font:inherit;opacity:.55;transition:opacity .3s}
+.wg-pick:hover,.wg-pick[aria-pressed="true"]{opacity:1}
+.wg-pick .n{font-family:"DM Mono",monospace;font-size:.75rem}
+.wg-pick[aria-pressed="true"] .n{color:#f2c6a7}
+.wg-pick img{width:64px;height:40px;object-fit:cover;object-position:top;border-radius:3px;transition:transform .3s}
+.wg-pick[aria-pressed="true"] img{transform:scale(1.06);box-shadow:0 0 0 1px #f2c6a7}
+.wg-pick strong{font-weight:500}
+.wg :focus-visible,.wg-lb :focus-visible{outline:2px solid #f2c6a7;outline-offset:3px}
+.wg-lb{position:fixed;inset:0;z-index:1000;background:rgba(26,8,18,.94);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:4rem 1rem 2rem;color:#fff4ef}
+.wg-lb[hidden]{display:none}
+.wg-lb img{max-width:min(92vw,1600px);max-height:76vh;object-fit:contain;border-radius:6px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.wg-lb p{font-family:"DM Mono",monospace;font-size:.85rem;margin-top:1rem;text-align:center}
+.wg-lb .close{position:absolute;top:1rem;right:1rem}
+.wg-lb .prev,.wg-lb .next{position:absolute;top:50%;transform:translateY(-50%)}
+.wg-lb .prev{left:1rem}.wg-lb .next{right:1rem}
+.wg-lb .wg-btn{background:rgba(53,20,38,.7)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media (max-width:900px){.wg{grid-template-columns:minmax(0,1fr)}.wg-frame{padding:22px 6px 6px}.wg-frame:before{top:8px;left:10px;width:6px;height:6px}
+.wg-lb .prev,.wg-lb .next{top:auto;bottom:1rem;transform:none}}
+@media (prefers-reduced-motion:reduce){.wg *,.wg-frame,.wg-track{transition:none!important}}
+/* v2 layout: full-width section */
+.work-category-index.section-shell{display:block}
+.wci-head{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(1.5rem,5vw,5rem);align-items:end;padding-bottom:clamp(1.5rem,3vw,2.5rem);border-bottom:1px solid rgba(255,244,239,.12)}
+.wci-head .section-number{margin:0 0 1.2rem}
+.work-category-index .wci-head h2{margin:0}
+.work-category-index .wci-head .wci-intro{max-width:34rem;margin:0;justify-self:end;font-size:1.05rem;line-height:1.6;opacity:.85}
+.wg{grid-template-columns:minmax(0,63fr) minmax(0,37fr);gap:clamp(1.5rem,3.5vw,3.5rem);align-items:stretch}
+.wg-stage{isolation:isolate}
+.wg-glow{position:absolute;inset:-6% -4% 8% -4%;z-index:-1;border-radius:40px;background:radial-gradient(60% 55% at 30% 35%,rgba(242,198,167,.22),transparent 70%),radial-gradient(55% 60% at 80% 75%,rgba(74,32,53,.9),transparent 75%);filter:blur(30px);pointer-events:none}
+.wg-frame{padding:0;border-radius:18px;overflow:hidden;background:linear-gradient(180deg,#4a2035,#351426);box-shadow:0 2px 0 rgba(255,244,239,.06) inset,0 0 0 1px rgba(242,198,167,.16),0 10px 20px -8px rgba(0,0,0,.35),0 40px 70px -20px rgba(0,0,0,.55),0 80px 140px -40px rgba(26,8,18,.8)}
+.wg-frame:before{display:none}
+.wg-bar{display:flex;align-items:center;gap:7px;height:38px;padding:0 16px;border-bottom:1px solid rgba(255,244,239,.08)}
+.wg-bar i{width:10px;height:10px;border-radius:50%;background:rgba(255,244,239,.2)}.wg-bar i:first-child{background:rgba(242,198,167,.7)}
+.wg-url{flex:1;margin-left:14px;max-width:420px;height:22px;line-height:22px;border-radius:99px;background:rgba(26,8,18,.45);font-family:"DM Mono",monospace;font-size:.7rem;padding:0 12px;opacity:.7;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.wg-view{border-radius:0;aspect-ratio:auto;height:min(calc(var(--wgw,60vw)*.625),calc(100vh - 260px));min-height:240px;max-height:820px}
+.wg-track{display:grid;transform:none!important}
+.wg-slide{grid-area:1/1;opacity:0;transition:opacity .7s ease,transform 1.2s cubic-bezier(.2,.7,.2,1);transform:scale(1.015)}
+.wg-slide[aria-hidden="false"]{opacity:1;transform:none;z-index:1}
+.wg-view .wg-btn{position:absolute;top:50%;z-index:3;width:54px;height:54px;transform:translateY(-50%);background:rgba(26,8,18,.55);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-color:rgba(242,198,167,.35);font-size:1.3rem;opacity:.85;transition:opacity .3s,background .2s}
+.wg-view .prev{left:16px}.wg-view .next{right:16px}
+.wg-view:hover .wg-btn{opacity:1}
+.wg-capbar{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:14px 18px;border-top:1px solid rgba(255,244,239,.08)}
+.wg-capbar .wg-cap{margin:0;font-size:.85rem;opacity:.9}
+.wg-prog{height:3px;background:rgba(255,244,239,.08)}.wg-prog span{display:block;height:100%;background:linear-gradient(90deg,#f2c6a7,#e9a985);transition:width .6s cubic-bezier(.2,.7,.2,1)}
+.wg-thumbs{display:flex;gap:12px;margin-top:18px;overflow-x:auto;padding:4px 2px 6px;scrollbar-width:thin}
+.wg-dot{flex:0 0 auto;width:clamp(84px,8vw,120px);height:auto;aspect-ratio:16/10;padding:0;border-radius:8px;overflow:hidden;opacity:.5;background:#2a0f1e;box-shadow:0 0 0 1px rgba(255,244,239,.12);transition:opacity .3s,box-shadow .3s,transform .3s}
+.wg-dot img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.wg-dot:hover{opacity:.85;transform:translateY(-2px)}
+.wg-dot[aria-current="true"]{opacity:1;width:clamp(84px,8vw,120px);background:#2a0f1e;box-shadow:0 0 0 2px #f2c6a7,0 10px 24px -10px rgba(0,0,0,.6)}
+.wg-info{display:flex;flex-direction:column}
+.wg-list{flex:1;display:flex;flex-direction:column;margin-top:1.8rem}
+.wg-list li{flex:1;display:flex}
+.wg-pick{grid-template-columns:96px 1fr;padding:.8rem 0}
+.wg-pick img{width:96px;height:60px;border-radius:6px}
+@media (max-width:900px){
+.wci-head{grid-template-columns:1fr;align-items:start}.work-category-index .wci-head .wci-intro{justify-self:start}
+.wg-view{height:auto;aspect-ratio:16/10;min-height:0}
+.wg-view .wg-btn{width:44px;height:44px;font-size:1.1rem}.wg-view .prev{left:10px}.wg-view .next{right:10px}
+.wg-bar{height:30px}.wg-url{display:none}
+.wg-list li{flex:0 0 auto}}
+@media (max-width:520px){.wg-view .wg-btn{width:38px;height:38px}.wg-capbar{padding:10px 12px}.wg-dot{width:72px}.wg-dot[aria-current="true"]{width:72px}}
+@media (prefers-reduced-motion:reduce){.wg-slide{transform:none!important}}
+/* v2 compact header + responsive (placed last to win cascade) */
+.work-category-index.section-shell{padding-top:clamp(2rem,4vw,3.5rem)}
+.work-category-index .wci-head h2{font-size:clamp(2.2rem,3.6vw,3.6rem);line-height:1.02}
+.wci-head .section-number{margin-bottom:.8rem}
+.wg{margin-top:clamp(1.5rem,3vw,2.5rem)}
+.wg-view{height:min(calc(var(--wgw,60vw)*.625),calc(100vh - 330px))}
+.wg-pick{padding:.6rem 0}
+@media (min-width:901px){.work-category-index .wci-head h2 br{display:none}}
+@media (max-width:900px){.wg{grid-template-columns:minmax(0,1fr)}.wg-view{height:auto}.wg-list{flex:0 0 auto}}
+@media (min-width:901px){.wg-dot,.wg-dot[aria-current="true"]{width:clamp(72px,6.2vw,104px)}.wg-thumbs{margin-top:14px}.wg-capbar{padding:11px 18px}.wci-head{padding-bottom:1.4rem}}
+.wg-track{grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr);width:100%}
+.wg-slide{width:100%;min-width:0;overflow:hidden}

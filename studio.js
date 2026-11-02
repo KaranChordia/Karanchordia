@@ -100,18 +100,36 @@ if (sections.length && siteHeader) {
   divider.className = 'section-context-divider';
   const title = document.createElement('span');
   title.className = 'section-context-title';
-  context.append(page, divider, title);
+  const bar = document.createElement('span');
+  bar.className = 'section-context-progress';
+  context.append(page, divider, title, bar);
   document.body.append(context);
   let scheduled = false;
   function updateSectionContext() {
     scheduled = false;
-    const threshold = context.offsetHeight + 16;
+    // Switch as soon as a section's top reaches the upper part of the viewport.
+    const threshold = Math.max(context.offsetHeight + 16, innerHeight * 0.38);
     let current = sections[0];
     for (const section of sections) {
       if (section.getBoundingClientRect().top <= threshold) current = section;
       else break;
     }
-    title.textContent = current.dataset.sectionLabel;
+    const label = current.dataset.sectionLabel;
+    if (title._target === label) {
+      // Already showing or swapping to this label.
+    } else if (title.textContent && !motionPreference.matches) {
+      title._target = label;
+      title.classList.add('is-swapping');
+      clearTimeout(title._swap);
+      title._swap = setTimeout(() => { title.textContent = label; title.classList.remove('is-swapping'); }, 180);
+    } else {
+      clearTimeout(title._swap);
+      title.classList.remove('is-swapping');
+      title._target = label;
+      title.textContent = label;
+    }
+    const max = document.documentElement.scrollHeight - innerHeight;
+    context.style.setProperty('--p', max > 0 ? Math.min(1, scrollY / max).toFixed(4) : 0);
     context.classList.toggle('is-visible', siteHeader.getBoundingClientRect().bottom <= 0);
   }
   function scheduleSectionContext() {
@@ -124,4 +142,55 @@ if (sections.length && siteHeader) {
   addEventListener('resize', scheduleSectionContext);
   addEventListener('pageshow', scheduleSectionContext);
   updateSectionContext();
+}
+
+// Viewfinder dock: a pill glides to the active item, previews on hover, and a fine line tracks page progress.
+if (dock) {
+  const glide = document.createElement('span');
+  glide.className = 'dock-glide';
+  glide.setAttribute('aria-hidden', 'true');
+  const progress = document.createElement('span');
+  progress.className = 'dock-progress';
+  progress.setAttribute('aria-hidden', 'true');
+  progress.append(document.createElement('i'));
+  dock.prepend(glide);
+  dock.append(progress);
+  const links = [...dock.querySelectorAll('a')];
+  const home = dock.querySelector('a[aria-current]');
+  function moveTo(link, peek) {
+    if (!link) { glide.classList.remove('is-ready'); return; }
+    glide.style.width = link.offsetWidth + 'px';
+    glide.style.height = link.offsetHeight + 'px';
+    glide.style.transform = `translate(${link.offsetLeft}px, ${link.offsetTop}px)`;
+    glide.classList.toggle('is-peek', !!peek);
+    dock.classList.toggle('is-peeking', !!peek);
+    glide.classList.add('is-ready');
+  }
+  // Place the pill instantly on load, resize and back/forward restore, so it never replays its glide.
+  function snap(fn) {
+    dock.classList.add('dock-snap');
+    fn();
+    void glide.offsetWidth;
+    requestAnimationFrame(() => requestAnimationFrame(() => dock.classList.remove('dock-snap')));
+  }
+  if (home) dock.classList.add('has-glide');
+  const rest = () => home ? moveTo(home, false) : moveTo(null);
+  const settle = () => snap(rest);
+  links.forEach(link => {
+    link.addEventListener('pointerenter', event => { if (event.pointerType === 'mouse' && link !== home) moveTo(link, true); });
+    link.addEventListener('click', () => { if (link !== home) { moveTo(link, false); if (home) home.style.color = '#ead3dc'; link.style.color = '#351426'; } });
+  });
+  dock.addEventListener('pointerleave', rest);
+  addEventListener('resize', settle);
+  addEventListener('pageshow', () => { links.forEach(l => l.style.color = ''); settle(); });
+  if (document.fonts) document.fonts.ready.then(settle);
+  settle();
+  let ticking = false;
+  const paint = () => {
+    ticking = false;
+    const max = document.documentElement.scrollHeight - innerHeight;
+    progress.style.setProperty('--p', max > 0 ? Math.min(1, scrollY / max).toFixed(4) : 0);
+  };
+  addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(paint); } }, { passive: true });
+  paint();
 }

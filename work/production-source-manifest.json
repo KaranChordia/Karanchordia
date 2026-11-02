@@ -1,0 +1,271 @@
+{
+  "deployment": "dpl_DGZ48HMwX9rDQP8vPETj5yCF5zjT",
+  "domain": "https://karanchordia.com",
+  "retrieved": "2026-11-02",
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha1": "9ac8051ecc65e4bd9b6e35c665f42f66a1a0a4b5"
+    },
+    {
+      "path": "README.md",
+      "sha1": "cc883b2c3e3ff4895dd691d9c76a39050d1c3349"
+    },
+    {
+      "path": "about.html",
+      "sha1": "f576365d8eaff50099b7ac54099b3de2a1b53190"
+    },
+    {
+      "path": "app.js",
+      "sha1": "29507bf9b3c1f2c53e0eca53b138b93bd39d0f38"
+    },
+    {
+      "path": "assets/brand/apple-touch-icon.png",
+      "sha1": "152c219210a9eb0b62b1bcfd82f13abb8cf03135"
+    },
+    {
+      "path": "assets/brand/kc-favicon.png",
+      "sha1": "bed59462fc0544461cd9f3c26c1086eba9bc0cce"
+    },
+    {
+      "path": "assets/brand/kc-mark.png",
+      "sha1": "9ac00059bedc508b40024d2048c26109050899cc"
+    },
+    {
+      "path": "assets/work/artha/01-discover-short.jpg",
+      "sha1": "0ff2df46b5feff06da71b36e9bff417aad2d861a"
+    },
+    {
+      "path": "assets/work/artha/02-discover-long.jpg",
+      "sha1": "ce5fad3e73ed3031fa74b1c616dfe61f65a9aed6"
+    },
+    {
+      "path": "assets/work/artha/03-watchlist-empty.jpg",
+      "sha1": "0bea049014d364a2e7e446eae6df20b7bacfe53b"
+    },
+    {
+      "path": "assets/work/artha/04-research-lens.jpg",
+      "sha1": "ec9c04794873deab2874336e9486c2ccb769890f"
+    },
+    {
+      "path": "assets/work/artha/05-assistant.jpg",
+      "sha1": "2fa70391ef2e1d1865a2346697923af26535a8a2"
+    },
+    {
+      "path": "assets/work/artha/06-assistant-compare-horizons.jpg",
+      "sha1": "c9b5b8b841a5c03f28b366896b752ba19d05234b"
+    },
+    {
+      "path": "assets/work/artha/07-mobile.jpg",
+      "sha1": "042f0bb01a9dca658ee9c0d30b74266b13627a7e"
+    },
+    {
+      "path": "assets/work/hatch/01-home.jpg",
+      "sha1": "cc2c0b90a54748c83883f0d8c7d9ba26b6518656"
+    },
+    {
+      "path": "assets/work/hatch/02-aria.jpg",
+      "sha1": "1cf33ffb61b8699a40e2ef835d17751efd21b8e5"
+    },
+    {
+      "path": "assets/work/hatch/03-makers.jpg",
+      "sha1": "bcb2edc867d82f25e608ffb7e8e59201fe904166"
+    },
+    {
+      "path": "assets/work/hatch/04-requests.jpg",
+      "sha1": "d0d0c7627fcea593317f4ce0cf28eb1300c0a400"
+    },
+    {
+      "path": "assets/work/hatch/05-loop-mentor.jpg",
+      "sha1": "97b5ffac9b550b7cb43da57f589cd175862397ab"
+    },
+    {
+      "path": "assets/work/hatch/06-session.jpg",
+      "sha1": "3c7b628719568e26e916db381b57ab36900bc709"
+    },
+    {
+      "path": "assets/work/hatch/07-mobile.jpg",
+      "sha1": "16c2e3ac5b8d30a9416aa733b394cb7e83978e0f"
+    },
+    {
+      "path": "assets/work/kosh/create.jpg",
+      "sha1": "96cfc049e1d96294ec2e087b2f951dcfcae5e48b"
+    },
+    {
+      "path": "assets/work/kosh/library.jpg",
+      "sha1": "64de1399519e01a236685eeda6012dedd0aaaf75"
+    },
+    {
+      "path": "assets/work/kosh/resource.jpg",
+      "sha1": "f1f0e4d16d2805612fbaf24aa092182833ea1037"
+    },
+    {
+      "path": "assets/work/kramaniti/home.jpg",
+      "sha1": "4958bc07a4fbd9813871bc8e953849d849b2a729"
+    },
+    {
+      "path": "assets/work/kramaniti/method.jpg",
+      "sha1": "10e265f586d8e7e3a658717582026dc388e4afd6"
+    },
+    {
+      "path": "assets/work/kramaniti/problem.jpg",
+      "sha1": "ffed76eb561c5c30623288908e685946157cdf7a"
+    },
+    {
+      "path": "assets/work/maitri/home.jpg",
+      "sha1": "140bcc371143782d2b38092ec3e64cdf3bd5eef9"
+    },
+    {
+      "path": "assets/work/maitri/library.jpg",
+      "sha1": "478517a036107f2a5705bc1ddaccc8e451d61a10"
+    },
+    {
+      "path": "assets/work/maitri/manu.jpg",
+      "sha1": "35002595d34a8c13ade8a4f81dab8d53d19e5afd"
+    },
+    {
+      "path": "assets/work/saha/01-overview.jpg",
+      "sha1": "a2dad2910116bd1e9003d4b20dc01ce8e73a57fe"
+    },
+    {
+      "path": "assets/work/saha/02-guests.jpg",
+      "sha1": "871a4419b99a14dee3eaa9889cdc0219d03be122"
+    },
+    {
+      "path": "assets/work/saha/03-requests.jpg",
+      "sha1": "74e392277230be49281e7d3e4227f46216a2f9e3"
+    },
+    {
+      "path": "assets/work/saha/04-experiences.jpg",
+      "sha1": "7cac1770482e86ea242017115625d9dbed24038c"
+    },
+    {
+      "path": "assets/work/saha/05-insights.jpg",
+      "sha1": "7a2750edb6aedf3f1436ee673d63ad50258818c0"
+    },
+    {
+      "path": "assets/work/saha/06-house-switcher.jpg",
+      "sha1": "672a8dae493ba934b27829b0682eb86ec85730a0"
+    },
+    {
+      "path": "assets/work/saha/08-mobile.jpg",
+      "sha1": "8b1cc0fe81f53e11f970a5270e0cdd82ff099650"
+    },
+    {
+      "path": "case-artha.html",
+      "sha1": "1b7ae6865fad683f941f3b6f954d2c586cf4fd55"
+    },
+    {
+      "path": "case-hatch.html",
+      "sha1": "f6138f6e488901c182e3cc7c63988f52da6b3d1a"
+    },
+    {
+      "path": "case-kosh.html",
+      "sha1": "55f16ef6941ff7bdb746c0e83fdf5b9ff611f5f1"
+    },
+    {
+      "path": "case-kramaniti.html",
+      "sha1": "0dee4323b48386c4fdd9158931239f147fa81cc9"
+    },
+    {
+      "path": "case-maitri.html",
+      "sha1": "ac3a5ba8dcc2e04df05ef39cad89d2848b717698"
+    },
+    {
+      "path": "case-saha.html",
+      "sha1": "07e6cfb741334375c1ce6dded08c41ffe29aa201"
+    },
+    {
+      "path": "case-studies.css",
+      "sha1": "d4e84b84f5a29440a6c48423c5baa6c33e51ba27"
+    },
+    {
+      "path": "contact.html",
+      "sha1": "ff0a845ab8489c381002f3dc5ec98dcf3b9915c5"
+    },
+    {
+      "path": "editorial-motion.css",
+      "sha1": "c32ba715db6d65fded09ae66eded0ff6faf23675"
+    },
+    {
+      "path": "editorial-motion.js",
+      "sha1": "040ee9bc78015ac89e3e37adafdf967321ebdd79"
+    },
+    {
+      "path": "favicon.svg",
+      "sha1": "e0d2326ffa1b33ed58fa4f6bb1d74ccb166fdb70"
+    },
+    {
+      "path": "gallery.css",
+      "sha1": "65416a812785b8beeb557f79ff3cc3e2dabe6cec"
+    },
+    {
+      "path": "gallery.js",
+      "sha1": "ddb04665096379a1e78c2543cbc5f786660a5c4d"
+    },
+    {
+      "path": "home-motion.css",
+      "sha1": "a2464715b03038b3cbd23ce23a44daa9eb4c4e66"
+    },
+    {
+      "path": "home-motion.js",
+      "sha1": "3fc7e4a0322fc555f01ac284ed5c7e5a1331ba88"
+    },
+    {
+      "path": "howdramatech-videos.md",
+      "sha1": "731a2c97f27064f389747cf8489201f4bab5e394"
+    },
+    {
+      "path": "index.html",
+      "sha1": "974f25a247816869dcf5601bbce518e9b322ddea"
+    },
+    {
+      "path": "insights.html",
+      "sha1": "71b41229e3ec8e549bc6803154e2d1bb22cf5c46"
+    },
+    {
+      "path": "lite-yt.js",
+      "sha1": "5ca6697e513148d2d436c4329ececb30bd0db6b1"
+    },
+    {
+      "path": "media-gallery.css",
+      "sha1": "672c1c795a84cae7eb9dbddc7e0c9b137444e3ce"
+    },
+    {
+      "path": "media-gallery.js",
+      "sha1": "cd68cfb575a8597c72a8e05c35c23215ce12eb77"
+    },
+    {
+      "path": "preview_server.py",
+      "sha1": "2b8e7097b2c4500e74101196eb85026d61220bb0"
+    },
+    {
+      "path": "studio.css",
+      "sha1": "e9ee598ba2f3175fdbf2eb2fa354731465e19ffb"
+    },
+    {
+      "path": "studio.js",
+      "sha1": "51b975a5e0723671c16e623f5cf4448b9f32b333"
+    },
+    {
+      "path": "styles.css",
+      "sha1": "ab823d5ce9b1e0708618da4457ad8e9c274adff6"
+    },
+    {
+      "path": "ui-align.css",
+      "sha1": "63c739c0044fedfcad94afeea561cd86b9686179"
+    },
+    {
+      "path": "vercel.json",
+      "sha1": "f411be24b86fe963ee3dc2d1087321b2e2174a75"
+    },
+    {
+      "path": "work-choreography.js",
+      "sha1": "0328700a1a3505ac70bc9d595e5ece6ee4c80391"
+    },
+    {
+      "path": "work.html",
+      "sha1": "406baf83e02ce834530341c4bac5d78d9a6e8d92"
+    }
+  ]
+}

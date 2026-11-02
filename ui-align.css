@@ -1,0 +1,81 @@
+/* ui-align.css: shared viewfinder tokens and components, reused from gallery.css, media-gallery.css and the dock */
+:root{
+  --vf-plum:#351426;--vf-plum-2:#4a2035;--vf-deep:#2a0f1e;--vf-peach:#f2c6a7;--vf-ink:#fff4ef;
+  --vf-r-frame:14px;--vf-r-inner:6px;--vf-r-card:18px;--vf-r-pill:999px;
+  --vf-line:rgba(255,244,239,.12);
+  --vf-shadow:0 40px 80px -30px rgba(0,0,0,.6),0 0 0 1px rgba(255,244,239,.08);
+  --vf-shadow-sm:0 18px 40px -22px rgba(0,0,0,.55),0 0 0 1px rgba(255,244,239,.08);
+  --vf-glow:0 0 60px -20px rgba(242,198,167,.35);
+  --vf-glass:rgba(26,8,18,.55);
+  --vf-ease:cubic-bezier(.2,.7,.2,1);
+  --vf-ring:0 0 0 2px var(--vf-plum),0 0 0 4px var(--vf-peach);
+}
+/* Focus rings: one peach ring everywhere */
+a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--vf-peach);outline-offset:3px}
+.practice-section a:focus-visible,.story-chapters a:focus-visible,.writing-arc a:focus-visible,.case-boundary a:focus-visible,.maker-note a:focus-visible{outline-color:var(--vf-plum)}
+
+/* Primary button: peach pill with lift */
+.button-link{border-radius:var(--vf-r-pill);background:var(--vf-peach);color:var(--vf-plum);box-shadow:0 10px 24px -12px rgba(242,198,167,.6),0 0 0 1px rgba(255,244,239,.12) inset;transition:transform .25s var(--vf-ease),box-shadow .25s var(--vf-ease),background .2s}
+.button-link:hover{transform:translateY(-2px);background:#f6d3bb;box-shadow:0 16px 30px -12px rgba(242,198,167,.7),var(--vf-glow)}
+.button-link:active{transform:translateY(0) scale(.98)}
+
+/* Text link with arrow: thin peach progress-style underline, arrow nudge */
+.text-link,.primary-link{background-image:linear-gradient(currentColor,currentColor);background-repeat:no-repeat;background-size:100% 1px;background-position:0 100%;border-bottom:0;transition:color .2s,background-size .35s var(--vf-ease)}
+.text-link:hover,.primary-link:hover{color:var(--vf-peach);background-image:linear-gradient(var(--vf-peach),var(--vf-peach))}
+.practice-section .text-link:hover,.story-chapters .text-link:hover,.writing-arc .primary-link:hover,.maker-note .text-link:hover,.case-boundary .text-link:hover{color:#8a3b5c;background-image:linear-gradient(#8a3b5c,#8a3b5c)}
+.case-page p>a[href^="http"]{color:var(--vf-peach);background-image:linear-gradient(currentColor,currentColor);background-repeat:no-repeat;background-size:100% 1px;background-position:0 100%;padding-bottom:2px}
+
+/* Home selected projects: viewfinder frame */
+.selected-project .project-preview{border-radius:var(--vf-r-frame);background:var(--vf-plum-2);box-shadow:var(--vf-shadow);padding-top:42px}
+.selected-project .project-preview:before{content:"";position:absolute;top:15px;left:16px;width:8px;height:8px;border-radius:50%;background:rgba(242,198,167,.55);box-shadow:14px 0 rgba(255,244,239,.22),28px 0 rgba(255,244,239,.22);z-index:1}
+.selected-project .project-preview img{border-radius:var(--vf-r-inner)}
+.selected-project{transition:transform .35s var(--vf-ease)}
+.selected-project:hover{transform:translateY(-2px)}
+.selected-project:hover .project-preview{box-shadow:var(--vf-shadow),var(--vf-glow)}
+.film-play{border-radius:50%;background:var(--vf-glass);border:1px solid rgba(242,198,167,.35);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+
+/* Case study screenshots: browser frame with dots, drawn in the image border (no markup change) */
+.case-visual{background:transparent;padding:0}
+.case-visual img,.case-image-grid img{box-sizing:border-box;border:10px solid transparent;border-top-width:30px;border-radius:var(--vf-r-frame);
+  background:radial-gradient(circle at 18px 15px,rgba(242,198,167,.55) 4px,transparent 4.5px),radial-gradient(circle at 32px 15px,rgba(255,244,239,.22) 4px,transparent 4.5px),radial-gradient(circle at 46px 15px,rgba(255,244,239,.22) 4px,transparent 4.5px),var(--vf-plum-2);
+  background-origin:border-box;box-shadow:var(--vf-shadow),var(--vf-glow)}
+.case-image-grid figure{transition:transform .35s var(--vf-ease)}
+.case-image-grid figure:hover{transform:translateY(-2px)}
+.case-image-grid figcaption{margin-top:14px;padding:12px 16px;border-radius:10px;background:rgba(74,32,53,.45);border:1px solid var(--vf-line)}
+.case-image-grid figcaption .mono{color:var(--vf-peach);letter-spacing:.05em}
+.case-meta{border-radius:var(--vf-r-frame)}
+
+/* Contact rows: glass cards with frosted circular arrow */
+.contact-paths>a{border-radius:var(--vf-r-card);padding:30px 24px;margin-top:10px;border:1px solid var(--vf-line);background:rgba(74,32,53,.25);transition:transform .3s var(--vf-ease),background .3s,box-shadow .3s,border-color .3s}
+.contact-paths>a:hover{transform:translateY(-2px);background:rgba(74,32,53,.55);border-color:rgba(242,198,167,.35);box-shadow:var(--vf-shadow-sm),var(--vf-glow)}
+.contact-paths>a:active{transform:translateY(0)}
+.contact-paths b{display:grid;place-items:center;width:46px;height:46px;font-size:18px;border-radius:50%;background:var(--vf-glass);border:1px solid rgba(242,198,167,.35);transition:background .2s,transform .3s var(--vf-ease)}
+.contact-paths>a:hover b{background:var(--vf-peach);color:var(--vf-plum);transform:rotate(-8deg)}
+.contact-prompt{padding:0 24px}
+
+/* Insights essay rows */
+.essay-row{border-radius:var(--vf-r-card);padding:30px 20px;transition:background .3s,transform .3s var(--vf-ease)}
+.essay-row:hover{background:rgba(74,32,53,.35);transform:translateY(-2px)}
+.essay-row>span:last-child,.essay-lead>span:last-child{transition:transform .3s var(--vf-ease)}
+.essay-row:hover>span:last-child{transform:translate(3px,-3px)}
+
+/* Closing CTA arrow as frosted circle */
+.studio-close>a>span{transition:transform .35s var(--vf-ease)}
+
+/* Footer: back to top as glass pill chip */
+.site-footer>div a{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:var(--vf-r-pill);border:1px solid var(--vf-line);background:rgba(74,32,53,.35);transition:border-color .2s,color .2s,transform .25s var(--vf-ease)}
+.site-footer>div a:hover{border-color:var(--vf-peach);color:var(--vf-peach);transform:translateY(-2px)}
+.site-footer>div{align-items:center}
+
+/* Mobile tap targets */
+@media(max-width:700px){
+  .wordmark,.footer-name{min-height:44px;display:inline-flex;align-items:center}
+  .text-link,.primary-link,.wg-link,.case-page p>a[href^="http"]{display:inline-flex;align-items:center;min-height:44px}
+  .work-jump a,.vg-chip,.vg-item,.vg-more{min-height:44px}
+  .wg-btn{min-width:44px;min-height:44px}
+  .contact-paths>a{padding:22px 18px}
+  .essay-row{padding:24px 12px}
+}
+@media(prefers-reduced-motion:reduce){
+  .button-link,.selected-project,.case-image-grid figure,.contact-paths>a,.contact-paths b,.essay-row,.site-footer>div a{transition:none!important;transform:none!important}
+}

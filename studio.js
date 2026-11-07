@@ -53,6 +53,16 @@ motionPreference.addEventListener('change', event => {
 // Keep native navigation and show immediate feedback while the next page loads.
 const dock = document.querySelector('#site-nav');
 if (dock) {
+  // Production uses Vercel clean URLs. Rewrite only the dock's internal
+  // routes there so navigation does not pay for an avoidable .html redirect;
+  // localhost keeps the source-file URLs for the static preview server.
+  if (!/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) {
+    const cleanRoutes = { 'index.html': '/', 'work.html': '/work', 'insights.html': '/insights', 'about.html': '/about', 'contact.html': '/contact' };
+    dock.querySelectorAll('a').forEach(link => {
+      const path = new URL(link.href, location.href).pathname.split('/').pop();
+      if (cleanRoutes[path]) link.href = cleanRoutes[path];
+    });
+  }
   const status = document.createElement('div');
   status.className = 'dock-status';
   status.setAttribute('role', 'status');

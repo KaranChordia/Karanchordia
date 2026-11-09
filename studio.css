@@ -488,3 +488,27 @@ em{font-family:var(--sans);font-style:normal;font-weight:500;letter-spacing:inhe
   .site-header nav a:hover,.site-header nav a:last-child:not([aria-current]):hover{transform:none}
   .dock-glide.is-peek{background:#4a2035}
 }
+
+/* Compact text-only dock: less chrome, clearer labels, and a grounded shadow. */
+.site-header nav,.site-header nav.open{
+  gap:2px;
+  padding:4px;
+  border-radius:10px;
+  box-shadow:0 14px 32px rgba(15,5,12,.46),0 3px 8px rgba(15,5,12,.28),0 0 0 1px rgba(11,12,15,.18);
+}
+.site-header nav a,.site-header nav a:last-child{
+  min-width:72px;
+  min-height:42px;
+  padding:6px 12px;
+  gap:0;
+  border-radius:6px;
+}
+.site-header nav a svg{display:none}
+.site-header nav a:last-child{border-radius:0 6px 6px 0}
+.dock-glide{border-radius:6px;box-shadow:0 1px 0 rgba(255,255,255,.65) inset,0 5px 14px rgba(242,198,167,.2)}
+@media(max-width:640px){
+  .site-header nav,.site-header nav.open{gap:1px;padding:4px;border-radius:10px}
+  .site-header nav a,.site-header nav a:last-child{width:calc((100vw - 38px)/5);max-width:76px;min-height:42px;padding:6px 3px;border-radius:6px;font-size:10px}
+  .site-header nav a:last-child{border-radius:0 6px 6px 0}
+  .dock-glide{border-radius:6px}
+}

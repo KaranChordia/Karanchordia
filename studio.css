@@ -533,3 +533,10 @@ em{font-family:var(--sans);font-style:normal;font-weight:500;letter-spacing:inhe
   .site-header nav a:last-child{border-radius:0 6px 6px 0}
   .dock-glide{border-radius:6px}
 }
+
+/* Keep the compact contact item inside the dock on narrow screens. */
+.site-header nav a:last-child{margin-left:0}
+@media(max-width:640px){
+  .site-header nav a:last-child{margin-left:0;overflow:hidden}
+  .site-header nav a span{white-space:nowrap}
+}

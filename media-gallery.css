@@ -98,3 +98,12 @@
 .wr-cards{grid-template-columns:1fr}}
 @media (max-width:520px){.vg-play-t{display:none}.vg-play{padding:.5rem}.vg-view .wg-btn{width:36px;height:36px;font-size:1rem}.vg-item{grid-template-columns:minmax(0,1fr)}.vg-item .c{display:none}.work-jump{gap:8px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.work-jump a{flex:0 0 auto;font-size:.82rem;padding:.5rem .85rem}.vg-page{display:none}}
 @media (prefers-reduced-motion:reduce){.vg-poster,.vg-play,.wr-card,.vg-chip,.work-jump a{transition:none!important}.wr-card:hover{transform:none}}
+
+/* Gallery actions share the compact button geometry used by the main site. */
+.work-jump a,.vg-chip,.vg-more,.vg-page,.wg-btn,.vg-play,.wg-link{
+  border-radius:8px;
+  box-shadow:inset 0 1px rgba(255,255,255,.12),0 8px 18px rgba(33,11,23,.22);
+}
+.work-jump a:hover,.vg-chip:hover,.vg-more:hover,.vg-page:not(:disabled):hover,.wg-btn:hover,.vg-play:hover,.wg-link:hover{
+  box-shadow:inset 0 1px rgba(255,255,255,.18),0 12px 24px rgba(33,11,23,.3);
+}

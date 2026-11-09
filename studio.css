@@ -489,6 +489,27 @@ em{font-family:var(--sans);font-style:normal;font-weight:500;letter-spacing:inhe
   .dock-glide.is-peek{background:#4a2035}
 }
 
+/* Match the section context indicator to the dock's compact surface language. */
+.section-context{
+  gap:8px;
+  min-height:36px;
+  padding:6px 11px;
+  border:1px solid rgba(242,198,167,.24);
+  border-radius:8px;
+  background:#27111e;
+  box-shadow:0 12px 28px rgba(15,5,12,.4),0 3px 8px rgba(15,5,12,.22);
+  backdrop-filter:none;
+  -webkit-backdrop-filter:none;
+}
+.section-context:before{width:4px;height:4px;border-radius:1px;box-shadow:none;animation:none}
+.section-context-page{font-size:8px}
+.section-context-divider{height:12px}
+.section-context-title{font-size:11px}
+@media(max-width:640px){
+  .section-context{min-height:34px;padding:6px 10px;border-radius:8px}
+  .section-context-title{font-size:11px}
+}
+
 /* Compact text-only dock: less chrome, clearer labels, and a grounded shadow. */
 .site-header nav,.site-header nav.open{
   gap:2px;
